@@ -1,4 +1,13 @@
-# Table Build Ordering
+# Tables
+
+User
+Applicant
+Landlord
+Tenant
+Accommodation - Tristan
+Room
+
+## Ordering
 Tristan - AccommodationStatus
 Yuvir - PropertyType
 Zaeem - Location
@@ -34,3 +43,6 @@ Location
 ### Fabio - Green
 User
 Gender
+
+
+
