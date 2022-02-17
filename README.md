@@ -3,34 +3,34 @@ Tristan - AccommodationStatus \
 Yuvir - PropertyType \
 Zaeem - Location \
 Mika - ApplicationStatus \
-Gender/User - Fabio \
+Gender/User - Fabio
 
 Tristan - Accommodation \
 Yuvir - Landlord \
 Zaeem - Room \
 Lease/Tenant - Tiaan \
-Mika - Applicant \
+Mika - Applicant 
 
 ### Tristan - Blue
 Accommodation \
-AccommodationStatus \
+AccommodationStatus 
 
 ### Mika - Red
 Applicants \
-ApplicationStatus \
+ApplicationStatus 
 
 ### Tiaan - Yellow
 Tenant \
-Lease \
+Lease 
 
 ### Yuvir - Dark Red
 Landlord \
-PropertyType \
+PropertyType 
 
 ### Zaeem - Purple
 Room \
-Location \
+Location 
 
 ### Fabio - Green
 User \
-Gender \
+Gender 
