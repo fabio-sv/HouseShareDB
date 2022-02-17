@@ -1,36 +1,36 @@
 # Table Build Ordering
-Tristan - AccommodationStatus
-Yuvir - PropertyType
-Zaeem - Location
-Mika - ApplicationStatus
-Gender/User - Fabio
+Tristan - AccommodationStatus \
+Yuvir - PropertyType \
+Zaeem - Location \
+Mika - ApplicationStatus \
+Gender/User - Fabio \
 
-Tristan - Accommodation
-Yuvir - Landlord
-Zaeem - Room
-Lease/Tenant - Tiaan
-Mika - Applicant
+Tristan - Accommodation \
+Yuvir - Landlord \
+Zaeem - Room \
+Lease/Tenant - Tiaan \
+Mika - Applicant \
 
 ### Tristan - Blue
-Accommodation
-AccommodationStatus
+Accommodation \
+AccommodationStatus \
 
 ### Mika - Red
-Applicants
-ApplicationStatus
+Applicants \
+ApplicationStatus \
 
 ### Tiaan - Yellow
-Tenant
-Lease
+Tenant \
+Lease \
 
 ### Yuvir - Dark Red
-Landlord
-PropertyType
+Landlord \
+PropertyType \
 
 ### Zaeem - Purple
-Room
-Location
+Room \
+Location \
 
 ### Fabio - Green
-User
-Gender
+User \
+Gender \
