@@ -62,7 +62,7 @@ CREATE TABLE [dbo].[Accommodation](
 	[accommodationID] [int] IDENTITY(1,1) PRIMARY KEY,
 	[locationID] [int] FOREIGN KEY REFERENCES [Location]([locationID]),
 	[statusID] [int] FOREIGN KEY REFERENCES [AccommodationStatus]([statusID]),
-	[propertyTypeId] [int] FOREIGN KEY REFERENCES [PropertyType]([propertyTypeId]),
+	[propertyTypeID] [int] FOREIGN KEY REFERENCES [PropertyType]([propertyTypeID]),
 	[description] [varchar](300) NOT NULL,
 	[roomCount] [int] NOT NULL,
 	[bathroomCount] [int] NOT NULL,
@@ -73,8 +73,8 @@ CREATE TABLE [dbo].[Accommodation](
 GO
 
 CREATE TABLE [Gender] (
-	[ID] varchar(1) PRIMARY KEY NOT NULL,
-	description varchar(255) NOT NULL
+	[genderID] varchar(1) PRIMARY KEY NOT NULL,
+	[description] varchar(255) NOT NULL
 );
 GO
 
@@ -84,7 +84,7 @@ CREATE TABLE [User] (
 	[lastName] varchar(255) NOT NULL,
 	[age] int NOT NULL,
 	[email] varchar(255) NOT NULL,
-	[genderID] varchar(1) NOT NULL FOREIGN KEY REFERENCES [Gender](ID)
+	[genderID] varchar(1) NOT NULL FOREIGN KEY REFERENCES [Gender]([genderID])
 );
 GO
 
@@ -119,14 +119,14 @@ GO
 
 CREATE TABLE [Tenant] (
 	[tenantId] [int] IDENTITY(1,1) PRIMARY KEY,
-	[userId] [int] NOT NULL,
-	[roomId] [int] NOT NULL,
+	[userID] [int] FOREIGN KEY REFERENCES [User]([userID]),
+	[roomId] [int] FOREIGN KEY REFERENCES [Room]([roomId]),
 	
 );
 GO
 CREATE TABLE [Lease] (
 	[leaseId] [int] IDENTITY(1,1) PRIMARY KEY,
-	[tenantId] [int] NOT NULL,
+	[tenantId] [int] FOREIGN KEY REFERENCES [Tenant]([tenantId]),
 	[leaseAgreement] [varchar](255),
 );
 GO
