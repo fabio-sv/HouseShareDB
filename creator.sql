@@ -10,6 +10,8 @@ GO
 DROP TABLE IF EXISTS Location;
 GO
 
+USE HouseShare
+
 CREATE TABLE PropertyType (
     propertyTypeID int IDENTITY(1,1),
     [type] varchar(255) NOT NULL
@@ -84,6 +86,14 @@ CREATE TABLE Landlord (
     landlordID int IDENTITY(1,1) NOT NULL,
     accomodationID int FOREIGN KEY REFERENCES Accomodation(accomodationID),
     userID int FOREIGN KEY REFERENCES Users(userID),
+);
+GO
+
+CREATE TABLE Room (
+    roomID int IDENTITY(1,1) NOT NULL,
+    accomodationID int FOREIGN KEY REFERENCES Accomodation(accomodationID),
+    price decimal(10, 2) NOT NULL,
+    occupied bit NOT NULL
 );
 GO
 
