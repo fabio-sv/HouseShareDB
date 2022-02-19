@@ -81,6 +81,7 @@ CREATE TABLE Applicant (
 )
 
 CREATE TABLE Landlord (
+    landlordID int IDENTITY(1,1) NOT NULL,
     accomodationID int FOREIGN KEY REFERENCES Accomodation(accomodationID),
     userID int FOREIGN KEY REFERENCES Users(userID),
 );
