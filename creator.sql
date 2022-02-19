@@ -8,7 +8,7 @@ DROP TABLE IF EXISTS PropertyType;
 GO
 
 CREATE TABLE PropertyType (
-	propertyTypeId int IDENTITY(1,1),
+    propertyTypeId int IDENTITY(1,1),
     [type] varchar(255) NOT NULL
 );
 GO
