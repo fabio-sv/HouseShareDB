@@ -51,13 +51,27 @@ CREATE TABLE [dbo].[Accomodation](
 )
 GO
 
+CREATE TABLE Gender (
+	ID varchar(1) PRIMARY KEY NOT NULL,
+	description varchar(255) NOT NULL
+);
+GO
+
+CREATE TABLE Users (
+	userID int IDENTITY(1, 1) NOT NULL,
+	firstName varchar(255) NOT NULL,
+	lastName varchar(255) NOT NULL,
+	age int NOT NULL,
+	email varchar(255) NOT NULL,
+	genderID varchar(1) NOT NULL FOREIGN KEY REFERENCES Gender(ID)
+);
+GO
+
 CREATE TABLE ApplicationStatus (
     appStatusID int IDENTITY(1,1),
     [status] varchar(255) NOT NULL
 );
 GO
-
---Hey Fabs, please can you add your User Table here :)
 
 CREATE TABLE Applicant (
     tenantAppID int IDENTITY(1,1) NOT NULL,
