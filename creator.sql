@@ -11,7 +11,7 @@ DROP TABLE IF EXISTS Location;
 GO
 
 CREATE TABLE PropertyType (
-    propertyTypeId int IDENTITY(1,1),
+    propertyTypeID int IDENTITY(1,1),
     [type] varchar(255) NOT NULL
 );
 GO
@@ -76,10 +76,15 @@ GO
 CREATE TABLE Applicant (
     tenantAppID int IDENTITY(1,1) NOT NULL,
     appStatusID int FOREIGN KEY REFERENCES ApplicationStatus(appStatusID),
-    userID int FOREIGN KEY REFERENCES User(userID),
+    userID int FOREIGN KEY REFERENCES Users(userID),
     appDescription varchar(255) NOT NULL
 )
 
+CREATE TABLE Landlord (
+    accomodationID int FOREIGN KEY REFERENCES Accomodation(accomodationID),
+    userID int FOREIGN KEY REFERENCES Users(userID),
+);
+GO
 
 --Add Foreign Key Constraints Here
 ALTER TABLE [dbo].[AccomodationStatus]  WITH CHECK ADD  CONSTRAINT [FK_Accomodation_REFERENCE_AccomodationStatus] FOREIGN KEY([statusID])
