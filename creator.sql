@@ -124,6 +124,7 @@ CREATE TABLE [Tenant] (
 	
 );
 GO
+
 CREATE TABLE [Lease] (
 	[leaseId] [int] IDENTITY(1,1) PRIMARY KEY,
 	[tenantId] [int] FOREIGN KEY REFERENCES [Tenant]([tenantId]),
