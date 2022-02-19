@@ -97,6 +97,22 @@ CREATE TABLE Room (
 );
 GO
 
+
+CREATE TABLE Tenant (
+	[tenantId] [int] IDENTITY(1,1) NOT NULL,
+	[userId] [int] NOT NULL,
+	[roomId] [int] NOT NULL,
+	
+);
+GO
+CREATE TABLE Lease (
+	[leaseId] [int] IDENTITY(1,1) NOT NULL,
+	[tenantId] [int] NOT NULL,
+	[leaseAgreement] [varchar](255),
+);
+GO
+
+
 --Add Foreign Key Constraints Here
 ALTER TABLE [dbo].[AccomodationStatus]  WITH CHECK ADD  CONSTRAINT [FK_Accomodation_REFERENCE_AccomodationStatus] FOREIGN KEY([statusID])
 REFERENCES [dbo].[AccomodationStatus] ([statusID])
@@ -117,4 +133,23 @@ ALTER TABLE [dbo].[PropertyType]  WITH CHECK ADD  CONSTRAINT [FK_Accomodation_RE
 REFERENCES [dbo].[PropertyType] ([propertyTypeId])
 GO
 ALTER TABLE [dbo].[Accomodation] CHECK CONSTRAINT [FK_Accomodation_REFERENCE_AccomodationStatus]
+GO
+
+--Tried adding my foreign key constraints down here (Tiaan)
+ALTER TABLE [dbo].[Lease]  WITH CHECK ADD CONSTRAINT [FK_Tenant_REFERENCE_Lease] FOREIGN KEY([tenantId])
+REFERENCES [dbo].[Lease] ([tenantId])
+GO
+ALTER TABLE [dbo].[Tenant] CHECK CONSTRAINT [FK_Tenant_REFERENCE_Lease]
+GO
+
+ALTER TABLE [dbo].[Tenant]  WITH CHECK ADD CONSTRAINT [FK_User_REFERENCE_Tenant] FOREIGN KEY(userId)
+REFERENCES [dbo].[Tenant] (userId)
+GO
+ALTER TABLE [dbo].[User] CHECK CONSTRAINT [FK_User_REFERENCE_Tenant]
+GO
+
+ALTER TABLE [dbo].[Tenant]  WITH CHECK ADD CONSTRAINT [FK_Room_REFERENCE_Tenant] FOREIGN KEY(roomId)
+REFERENCES [dbo].[Tenant] (roomId)
+GO
+ALTER TABLE [dbo].[Room] CHECK CONSTRAINT [FK_Room_REFERENCE_Tenant]
 GO
