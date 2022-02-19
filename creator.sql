@@ -51,6 +51,21 @@ CREATE TABLE [dbo].[Accomodation](
 )
 GO
 
+CREATE TABLE ApplicationStatus (
+    appStatusID int IDENTITY(1,1),
+    [status] varchar(255) NOT NULL
+);
+GO
+
+--Hey Fabs, please can you add your User Table here :)
+
+CREATE TABLE Applicant (
+    tenantAppID int IDENTITY(1,1) NOT NULL,
+    appStatusID int FOREIGN KEY REFERENCES ApplicationStatus(appStatusID),
+    userID int FOREIGN KEY REFERENCES User(userID),
+    appDescription varchar(255) NOT NULL
+)
+
 
 --Add Foreign Key Constraints Here
 ALTER TABLE [dbo].[AccomodationStatus]  WITH CHECK ADD  CONSTRAINT [FK_Accomodation_REFERENCE_AccomodationStatus] FOREIGN KEY([statusID])
