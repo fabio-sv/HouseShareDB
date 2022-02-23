@@ -1,42 +1,46 @@
+USE master;
+GO
+
 DROP DATABASE IF EXISTS HouseShare;
 GO
+
 Create Database HouseShare
-go
-
-USE [HouseShare]
 GO
 
-DROP TABLE IF EXISTS ApplicationStatus;
+USE HouseShare;
+GO
+
+DROP TABLE IF EXISTS [ApplicationStatus];
 GO
  
-DROP TABLE IF EXISTS Landlord;
+DROP TABLE IF EXISTS [Landlord];
 GO
  
-DROP TABLE IF EXISTS Lease;
+DROP TABLE IF EXISTS [Lease];
 GO
  
-DROP TABLE IF EXISTS Tenant;
+DROP TABLE IF EXISTS [Tenant];
 GO
  
-DROP TABLE IF EXISTS Users;
+DROP TABLE IF EXISTS [Users];
 GO
  
-DROP TABLE IF EXISTS Gender;
+DROP TABLE IF EXISTS [Gender];
 GO
  
-DROP TABLE IF EXISTS Room;
+DROP TABLE IF EXISTS [Room];
 GO
  
-DROP TABLE IF EXISTS Accomodation;
+DROP TABLE IF EXISTS [Accomodation];
 GO
  
-DROP TABLE IF EXISTS PropertyType;
+DROP TABLE IF EXISTS [PropertyType];
 GO
  
 DROP TABLE IF EXISTS [Location];
 GO
  
-DROP TABLE IF EXISTS AccomodationStatus;
+DROP TABLE IF EXISTS [AccomodationStatus];
 GO
 
 CREATE TABLE [PropertyType] (
@@ -58,6 +62,7 @@ CREATE TABLE [dbo].[AccommodationStatus](
 	[decsription] [varchar](100) NULL
  );
 GO
+
 CREATE TABLE [dbo].[Accommodation](
 	[accommodationID] [int] IDENTITY(1,1) PRIMARY KEY,
 	[locationID] [int] FOREIGN KEY REFERENCES [Location]([locationID]),
@@ -99,7 +104,8 @@ CREATE TABLE [Applicant] (
     [appStatusID] int FOREIGN KEY REFERENCES [ApplicationStatus](appStatusID),
     [userID] int FOREIGN KEY REFERENCES [User](userID),
     [appDescription] varchar(255) NOT NULL
-)
+);
+GO
 
 CREATE TABLE [Landlord] (
     [landlordID] int IDENTITY(1,1) PRIMARY KEY,
@@ -115,7 +121,6 @@ CREATE TABLE [Room] (
     [occupied] bit NOT NULL
 );
 GO
-
 
 CREATE TABLE [Tenant] (
 	[tenantId] [int] IDENTITY(1,1) PRIMARY KEY,
