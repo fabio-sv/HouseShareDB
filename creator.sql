@@ -92,7 +92,7 @@ CREATE TABLE [User] (
 	[userID] int IDENTITY(1, 1) PRIMARY KEY,
 	[firstName] varchar(255) NOT NULL,
 	[lastName] varchar(255) NOT NULL,
-	[age] int NOT NULL,
+	[dateOfBirth] date NOT NULL,
 	[email] varchar(255) NOT NULL,
 	[genderID] varchar(1) NOT NULL FOREIGN KEY REFERENCES [Gender]([genderID])
 );
