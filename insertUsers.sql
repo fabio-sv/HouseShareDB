@@ -9,8 +9,6 @@ VALUES
 ('X', 'Non Disclosed');
 GO
 
-SELECT * FROM [Gender];
-
 INSERT INTO [User]
 VALUES
 ('Shermy','Cashford','7/6/1981','scashford0@php.net','M'),
