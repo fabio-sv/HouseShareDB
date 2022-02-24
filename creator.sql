@@ -49,11 +49,16 @@ CREATE TABLE [PropertyType] (
 );
 GO
 
+CREATE TABLE [Suburb] (
+	[suburbID] int IDENTITY(1,1) PRIMARY KEY,
+	[suburbName] varchar(50) NOT NULL
+)
 
 CREATE TABLE [Location] (
     [locationID] int IDENTITY(1,1) PRIMARY KEY ,
-    [latitude] decimal(8, 6) NOT NULL,
-    [longitude] decimal(9, 6) NOT NULL
+    [suburbID] FOREIGN KEY REFERENCES [Suburb]([suburbID]),
+    [streetName] varchar(100) NOT NULL,
+	[streenNumber] int NOT NULL
 );
 GO  
 
