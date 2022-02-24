@@ -1,4 +1,17 @@
-INSERT INTO [Users]
+Use HouseShare;
+GO
+
+INSERT INTO [Gender]
+VALUES
+('F', 'Female'),
+('M', 'Male'),
+('N', 'Non-binary'),
+('X', 'Non Disclosed');
+GO
+
+SELECT * FROM [Gender];
+
+INSERT INTO [User]
 VALUES
 ('Shermy','Cashford','7/6/1981','scashford0@php.net','M'),
 ('Jilli','Lindley','11/25/1960','jlindley1@myspace.com','M'),

@@ -1,3 +1,6 @@
+CREATE DATABASE HouseShare;
+GO
+
 Use HouseShare;
 GO
 
@@ -10,17 +13,18 @@ GO
 CREATE TABLE [Suburb] (
 	[suburbID] int IDENTITY(1,1) PRIMARY KEY,
 	[suburbName] varchar(50) NOT NULL
-)
+);
+GO
 
 CREATE TABLE [Location] (
     [locationID] int IDENTITY(1,1) PRIMARY KEY ,
-    [suburbID] FOREIGN KEY REFERENCES [Suburb]([suburbID]),
+    [suburbID] int FOREIGN KEY REFERENCES [Suburb]([suburbID]),
     [streetName] varchar(100) NOT NULL,
 	[streenNumber] int NOT NULL
 );
 GO  
 
-CREATE TABLE [dbo].[AccommodationStatus](
+CREATE TABLE [AccommodationStatus](
 	[statusID] [int] IDENTITY(1,1) PRIMARY KEY,
 	[decsription] [varchar](100) NULL
  );
