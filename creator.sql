@@ -1,46 +1,4 @@
-USE master;
-GO
-
-DROP DATABASE IF EXISTS HouseShare;
-GO
-
-Create Database HouseShare
-GO
-
-USE HouseShare;
-GO
-
-DROP TABLE IF EXISTS [ApplicationStatus];
-GO
- 
-DROP TABLE IF EXISTS [Landlord];
-GO
- 
-DROP TABLE IF EXISTS [Lease];
-GO
- 
-DROP TABLE IF EXISTS [Tenant];
-GO
- 
-DROP TABLE IF EXISTS [Users];
-GO
- 
-DROP TABLE IF EXISTS [Gender];
-GO
- 
-DROP TABLE IF EXISTS [Room];
-GO
- 
-DROP TABLE IF EXISTS [Accomodation];
-GO
- 
-DROP TABLE IF EXISTS [PropertyType];
-GO
- 
-DROP TABLE IF EXISTS [Location];
-GO
- 
-DROP TABLE IF EXISTS [AccomodationStatus];
+Use HouseShare;
 GO
 
 CREATE TABLE [PropertyType] (
