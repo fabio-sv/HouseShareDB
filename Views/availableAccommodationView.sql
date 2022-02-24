@@ -1,3 +1,6 @@
+USE HouseShare;
+GO
+
 CREATE VIEW [AvailableAccommodation] AS
 SELECT [description], [roomCount], [parking], [petsAllowed], [area], [Location].[streetNumber], [Location].[streetName], [Suburb].[suburbName], [PropertyType].[type]
 FROM [Accommodation]
