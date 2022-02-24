@@ -1,36 +1,30 @@
-# Table Build Ordering
-Tristan - AccommodationStatus \
-Yuvir - PropertyType \
-Zaeem - Location \
-Mika - ApplicationStatus \
-Gender/User - Fabio
+# House Share Database Project
 
-Tristan - Accommodation \
-Yuvir - Landlord \
-Zaeem - Room \
-Lease/Tenant - Tiaan \
-Mika - Applicant 
+Database project that facilitates the finding of Accommodation for people who are looking for roommates.
 
-### Tristan - Blue
-Accommodation \
-AccommodationStatus 
+## Assignments
 
-### Mika - Red
-Applicants \
-ApplicationStatus 
+### Tristan
+1. Accommodation Table
+2. AccommodationStatus Table
 
-### Tiaan - Yellow
-Tenant \
-Lease 
+### Mika
+1. Applicant Table
+2. ApplicantStatus Table
 
-### Yuvir - Dark Red
-Landlord \
-PropertyType 
+### Tiaan
+1. Tenant Table
+2. Lease Table
 
-### Zaeem - Purple
-Room \
-Location 
+### Zaeem
+1. Room Table
+2. Location Table
+3. Suburb Table
 
-### Fabio - Green
-User \
-Gender 
+### Yuvir
+1. Landlord Table
+2. PropertyType Table
+
+### Fabio
+1. User Table
+2. Gender Table

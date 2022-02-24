@@ -1,16 +1,15 @@
 const fs = require('fs');
 
-const fileContent = fs.readFileSync('Applicant.sql', { encoding: 'utf-8' });
-
+const inputFileName = 'Applicant.sql'
+const fileContent = fs.readFileSync(inputFileName, { encoding: 'utf-8' });
 const lines = fileContent.split('\n');
-let newLines = [];
 
-console.log('begin split', lines.length);
+let output = [];
 
 lines.forEach((line, index) => {
-  newLines.push(`(${line.trim()}),`);
+  output.push(`(${line.trim()}),`);
 });
 
-fs.writeFileSync('out.txt', newLines.join('\n'));
+fs.writeFileSync('out.txt', output.join('\n'));
 
-console.log('done');
+console.log('finito');

@@ -1,12 +1,12 @@
-use HouseShare
+USE HouseShare;
 Go
 
-insert into AccommodationStatus(decsription)
-values ('Available'),('Unavailable')
-go
+INSERT INTO AccommodationStatus(decsription)
+VALUES ('Available'),('Unavailable')
+GO
 
-insert into Accommodation (locationID, statusID, propertyTypeID, [description],roomCount, bathroomCount,parking,petsAllowed,area)
-values
+INSERT INTO Accommodation (locationID, statusID, propertyTypeID, [description],roomCount, bathroomCount,parking,petsAllowed,area)
+VALUES
 (1,1,2,'Lovely place to stay close to A KICKASS IT company that goes by the name of BBD', 1, 1, 2, 0,94),
 (2,1,1,'Lovely place to stay close to A KICKASS IT company that goes by the name of BBD', 3, 2, 3, 1,120),
 (4,1,4,'Lovely place to stay close to A KICKASS IT company that goes by the name of BBD', 3, 2, 2, 0,115),

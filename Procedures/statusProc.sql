@@ -27,3 +27,7 @@ AS
     WHERE [Accommodation].[accommodationID] = @accommodationID
   END
 GO
+
+-- Will run the proc with @accommodationID = 2
+EXEC uspSetAccommodationStatus @accommodationID = 2;
+GO

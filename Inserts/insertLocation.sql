@@ -577,4 +577,5 @@ VALUES
     (59, 'Harper Way', 71933),
     (39, 'Sachs Lane', 7),
     (7, 'Cambridge Plaza', 8617),
-    (59, 'Hazelcrest Way', 856)
+    (59, 'Hazelcrest Way', 856);
+GO

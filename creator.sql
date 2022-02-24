@@ -30,7 +30,7 @@ CREATE TABLE [AccommodationStatus](
  );
 GO
 
-CREATE TABLE [dbo].[Accommodation](
+CREATE TABLE [Accommodation](
 	[accommodationID] [int] IDENTITY(1,1) PRIMARY KEY,
 	[locationID] [int] FOREIGN KEY REFERENCES [Location]([locationID]),
 	[statusID] [int] FOREIGN KEY REFERENCES [AccommodationStatus]([statusID]),
